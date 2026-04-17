@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('t_penjualan', function (Blueprint $table) {
             $table->id('penjualan_id');
-            $table->foreignId('user_id')->constrained('users', 'user_id');
+            $table->foreignId('user_id')->constrained('m_user', 'user_id');
             $table->string('pembeli', 50)->nullable();
             $table->string('penjualan_kode', 20);
             $table->dateTime('penjualan_tanggal');

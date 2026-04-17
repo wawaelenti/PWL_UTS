@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('stok_id');
             $table->foreignId('supplier_id')->constrained('m_supplier', 'supplier_id');
             $table->foreignId('barang_id')->constrained('m_barang', 'barang_id');
-            $table->foreignId('user_id')->constrained('users', 'user_id');
+            $table->foreignId('user_id')->constrained('m_user', 'user_id');
             $table->dateTime('stok_tanggal');
             $table->integer('stok_jumlah');
             $table->timestamps();
