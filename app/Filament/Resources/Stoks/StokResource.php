@@ -13,12 +13,23 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class StokResource extends Resource
 {
     protected static ?string $model = Stok::class;
 
-    protected static ? string $navigationLabel = 'Stok';
+    public static function getNavigationLabel(): string
+    {
+        return 'Stok';
+    }
+    public static function getPluralLabel(): string
+    {
+        return 'Stok';
+    }
+    protected static string|UnitEnum|null $navigationGroup = 'Master Data';
+
+    protected static ?int $navigationSort = 3;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedClipboardDocumentList;
 

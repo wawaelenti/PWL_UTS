@@ -13,6 +13,7 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class PenjualanResource extends Resource
 {
@@ -23,6 +24,10 @@ class PenjualanResource extends Resource
     protected static ?string $recordTitleAttribute = 'penjualan_kode';
 
     protected static ?string $navigationLabel = "Penjualan";
+
+    protected static ?int $navigationSort = 6;
+
+    protected static string|UnitEnum|null $navigationGroup = 'Transaksi';
 
     public static function form(Schema $schema): Schema
     {

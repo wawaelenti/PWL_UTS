@@ -13,6 +13,7 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class SupplierResource extends Resource
 {
@@ -22,7 +23,17 @@ class SupplierResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'supplier_nama';
 
-    protected static ?string $navigationLabel = "Supplier";
+    public static function getNavigationLabel(): string
+    {
+        return 'Supplier';
+    }
+    public static function getPluralLabel(): string
+    {
+        return 'Supplier';
+    }
+    protected static string|UnitEnum|null $navigationGroup = 'Master Data';
+
+    protected static ?int $navigationSort = 5;
 
     public static function form(Schema $schema): Schema
     {

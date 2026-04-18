@@ -13,6 +13,7 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class KategoriResource extends Resource
 {
@@ -23,7 +24,17 @@ class KategoriResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'kategori_nama';
 
-    protected static ?string $navigationLabel = "Kategori";
+    public static function getNavigationLabel(): string
+    {
+        return 'Kategori';
+    }
+    public static function getPluralLabel(): string
+    {
+        return 'Kategori';
+    }
+    protected static string|UnitEnum|null $navigationGroup = 'Master Data';
+
+    protected static ?int $navigationSort = 2;
 
     public static function form(Schema $schema): Schema
     {
