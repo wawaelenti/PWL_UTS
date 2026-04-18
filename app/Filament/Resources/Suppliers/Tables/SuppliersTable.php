@@ -16,10 +16,14 @@ class SuppliersTable
             ->columns([
                 //
                 TextColumn::make('supplier_kode')
+                    ->label('Kode Supplier')
+                    ->sortable()
                     ->searchable(),
                 TextColumn::make('supplier_nama')
+                    ->label('Nama Supplier')
                     ->searchable(),
                 TextColumn::make('supplier_alamat')
+                    ->label('Alamat Supplier')
                     ->searchable(),
             ])
             ->filters([

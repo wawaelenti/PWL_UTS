@@ -25,6 +25,11 @@ class PenjualanResource extends Resource
 
     protected static ?string $navigationLabel = "Penjualan";
 
+    public static function getPluralLabel(): string
+    {
+        return 'Penjualan';
+    }
+
     protected static ?int $navigationSort = 6;
 
     protected static string|UnitEnum|null $navigationGroup = 'Transaksi';

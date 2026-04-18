@@ -15,8 +15,10 @@ class KategorisTable
         return $table
             ->columns([
                 TextColumn::make('kategori_kode')
+                    ->label('Kode Kategori')
                     ->searchable(),
                 TextColumn::make('kategori_nama')
+                    ->label('Nama Kategori')
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()

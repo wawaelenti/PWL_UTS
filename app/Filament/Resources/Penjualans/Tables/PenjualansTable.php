@@ -17,6 +17,7 @@ class PenjualansTable
             ->columns([
                 TextColumn::make('penjualan_kode')
                     ->searchable()
+                    ->sortable()
                     ->label('Kode Penjualan'),
                 TextColumn::make('pembeli')
                     ->searchable(),

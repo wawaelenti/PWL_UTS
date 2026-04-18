@@ -15,10 +15,14 @@ class BarangsTable
         return $table
             ->columns([
                 TextColumn::make('barang_kode')
+                    ->label('Kode Barang')
+                    ->sortable()
                     ->searchable(),
                 TextColumn::make('barang_nama')
+                    ->label('Nama Barang')
                     ->searchable(),
                 TextColumn::make('kategori.kategori_nama')
+                    ->label('Kategori')
                     ->searchable(),
                 TextColumn::make('harga_jual')
                     ->money('IDR', true)
